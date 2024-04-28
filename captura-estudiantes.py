@@ -39,7 +39,7 @@ class Dialogo(QDialog):
         self.ventana_tabla = QTableWidget(self)
         self.ventana_tabla.resize(800,400)
         self.ventana_tabla.setRowCount(12)  
-        self.ventana_tabla.setColumnCount(12) 
+        self.ventana_tabla.setColumnCount(10) 
         self.ventana_tabla.horizontalHeader().setStretchLastSection(True) 
         self.ventana_tabla.horizontalHeader().setSectionResizeMode( QHeaderView.Stretch)
         columnas = ("Nombre","Apellido Paterno", "Apellido Materno","Matricula","Edad", "Domicilio","Municipio","Estado","Porcentaje Beca","Materias Favoritas")
@@ -64,21 +64,21 @@ class Dialogo(QDialog):
         buttnRegresar = QPushButton("Regresar", self)
         buttnRegresar.setFixedWidth(150)
         buttnRegresar.move(500, 440)
-        buttnRegresar.setIcon(QIcon("img\ico-back.png"))
+        buttnRegresar.setIcon(QIcon("img/ico-back.png"))
         buttnRegresar.setIconSize(QtCore.QSize(30,30))
         
         
         buttnLimpiar = QPushButton("Borrar Todo", self)
         buttnLimpiar.setFixedWidth(150)
         buttnLimpiar.move(300, 440)
-        buttnLimpiar.setIcon(QIcon("img\ico-delete.png"))
+        buttnLimpiar.setIcon(QIcon("img/ico-delete.png"))
         buttnLimpiar.setIconSize(QtCore.QSize(30,30))
         
         
         self.buttnDeleteRow = QPushButton("Eliminar fila",self)
         self.buttnDeleteRow.setFixedWidth(150)
         self.buttnDeleteRow.move(100, 440)
-        self.buttnDeleteRow.setIcon(QIcon("img\ico-eliminar-fila.svg"))
+        self.buttnDeleteRow.setIcon(QIcon("img/ico-eliminar-fila.svg"))
         self.buttnDeleteRow.setIconSize(QtCore.QSize(30,30))
         
         
@@ -97,8 +97,8 @@ class Ventana_principal(QMainWindow):
     def __init__(self, parent=None):
         super(Ventana_principal, self).__init__(parent)
         self.setWindowTitle("Captura Alumnos")
-        self.setWindowIcon(QIcon("img\ico-pantalla.svg"))
-        self.setFixedSize(800, 550)
+        self.setWindowIcon(QIcon("img/ico-pantalla.svg"))
+        self.setFixedSize(700, 550)
         paleta = QPalette()
         paleta.setColor(QPalette.Background, QColor(85, 85, 127))
         self.setPalette(paleta)
@@ -197,17 +197,14 @@ class Ventana_principal(QMainWindow):
         labelTitulo= QLabel("Captura de Alumnos", self)
         labelTitulo.setFont(QFont("MS Shell Dlg 2", 20))
         labelTitulo.setStyleSheet('color:white')
-        labelTitulo.move(300, 10)
-        #labelTitulo2= QLabel("ALUMNOS", self)
-        #labelTitulo2.setFont(QFont("MS Shell Dlg 2", 11))
-        #labelTitulo2.setStyleSheet('color:white')
-        #labelTitulo2.move(390, 10)
+        labelTitulo.move(250, 10)
+        labelTitulo.resize(400,50)
         
         buttonGuardar = QPushButton(" Grabar", self)
         buttonGuardar.setFixedWidth(135)
         buttonGuardar.setFixedHeight(35)
         buttonGuardar.move(150, 450)
-        buttonGuardar.setIcon(QIcon("img\ico-save.png"))
+        buttonGuardar.setIcon(QIcon("img/ico-save.png"))
         buttonGuardar.setIconSize(QtCore.QSize(30,30))
 
         
@@ -215,7 +212,7 @@ class Ventana_principal(QMainWindow):
         buttonEscribir.setFixedWidth(135)
         buttonEscribir.setFixedHeight(35)
         buttonEscribir.move(310, 450)
-        buttonEscribir.setIcon(QIcon("img\ico-excel.svg"))
+        buttonEscribir.setIcon(QIcon("img/ico-excel.svg"))
         buttonEscribir.setIconSize(QtCore.QSize(25,25))
         
         
@@ -223,7 +220,7 @@ class Ventana_principal(QMainWindow):
         buttonLimpiar.setFixedWidth(135)
         buttonLimpiar.setFixedHeight(35)
         buttonLimpiar.move(470, 450)
-        buttonLimpiar.setIcon(QIcon("img\ico-clean.png"))
+        buttonLimpiar.setIcon(QIcon("img/ico-clean.png"))
         buttonLimpiar.setIconSize(QtCore.QSize(25,25))
 
         
